@@ -96,7 +96,31 @@
                     </figure>
                 </div>
             </div>
-            <div class="modal__half modal__contact">Let's chat!</div>
+            <div class="modal__half modal__contact">
+                <h3 class="modal__title">Let's chat!</h3>
+                <h4 class="modal__subtitle">I'm open for new opportunities.</h4>
+                <form id="contact__form">
+                    <div class="form__item">
+                        <label for="name" class="form__item--label">Name</label>
+                        <input type="text" name="user_name" class="input" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="email" class="form__item--label">Email</label>
+                        <input type="text" name="user_email" class="input" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="message" class="form__item--label">Message</label>
+                        <textarea type="text" name="message" class="input" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send</button>
+                </form>
+                <div class="modal__overlay modal__overlat--loading">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlat--success">
+                    Thank you!
+                </div>
+            </div>
         </div>
     </section>
     <section id="projects">

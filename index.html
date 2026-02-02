@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/9bb78053ee.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "sha_EqBtAvcUuOzyH",
+      });
+   })();
+</script>
 </head>
 <body>
     <section id="landing-page">
@@ -101,7 +111,7 @@
                 <i class="fa-solid fa-times modal__exit click"></i>
                 <h3 class="modal__title">Let's chat!</h3>
                 <h4 class="modal__subtitle">I'm open for new opportunities.</h4>
-                <form id="contact__form">
+                <form id="contact__form" onsubmit="contact()">
                     <div class="form__item">
                         <label for="name" class="form__item--label">Name</label>
                         <input type="text" name="user_name" class="input" required>

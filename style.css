@@ -235,6 +235,12 @@ nav {
 .modal__half {
     width: 50%;
     padding: 40px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 300ms ease;
 }
 
 .modal__about {
@@ -307,7 +313,6 @@ nav {
     color: white;
     font-weight: 700;
     width: 100%;
-    max-width: 240px;
     padding: 12px 24px;
     font-size: 20px;
     transition: all 300ms ease;
@@ -331,12 +336,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 
 .modal__overlay--loading {
     background-color: #242424;
     font-size: 80px;
-    z-index: -1;
 }
 
 .modal__overlay--success {
@@ -345,6 +350,32 @@ nav {
     font-weight: 700;
     text-align: center;
     padding: 28px;
+}
+
+.modal__overlay--visible {
+    z-index: 1;
+}
+
+.fa-spinner {
+    animation: spinner 750ms infinite linear;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal__exit {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 36px;
+    z-index: 100;
 }
 
 /* Projects */

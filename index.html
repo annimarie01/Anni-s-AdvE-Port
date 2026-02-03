@@ -39,15 +39,15 @@
                     nav__hover-effect--black
                     ">Projects</a>
                 </li>
-                <li class="nav__link">
-                    <a href="" class="
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
                     nav__link--anchor 
                     nav__hover-effect 
                     nav__hover-effect--black
                     ">Contact</a>
                 </li>
-                <li class="nav__link click">
-                    <a href="" class="
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="
                     nav__link--anchor 
                     nav__hover-effect 
                     nav__hover-effect--black
@@ -60,7 +60,7 @@
             <h1 class="header__title purple">I'm Annika.</h1>
             <p class="header__para">I'm a passionate <b class="purple">web developer and designer</b> creating beautiful, functional websites.
                 <br>
-                Here's my <b class="purple">socials</b>:
+                Here's my <b class="purple click" onclick="toggleModal()">socials</b>:
             </p>
             <div class="social__list">
                 <a href="" class="social__link click">
@@ -74,7 +74,7 @@
                 </a>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fa-solid fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -108,10 +108,10 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
-                <i class="fa-solid fa-times modal__exit click"></i>
+                <i class="fa-solid fa-times modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title">Let's chat!</h3>
                 <h4 class="modal__subtitle">I'm open for new opportunities.</h4>
-                <form id="contact__form" onsubmit="contact()">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label for="name" class="form__item--label">Name</label>
                         <input type="text" name="user_name" class="input" required>
@@ -130,7 +130,7 @@
                     <i class="fa-solid fa-spinner"></i>
                 </div>
                 <div class="modal__overlay modal__overlay--success">
-                    Thank you!
+                    Thank you! I'll message you soon.
                 </div>
             </div>
         </div>

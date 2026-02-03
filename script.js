@@ -1,6 +1,16 @@
-// 
-// 
-// 
+let isModalOpen = false;
+let contrastToggle = false;
+
+function toggleContrast() {
+    contrastToggle = !contrastToggle
+    if (contrastToggle) {
+        document.body.classList += ' dark--mode';
+    }
+    else {
+        document.body.classList.remove('dark--mode')
+    }
+    
+}
 
 function contact(event) {
     event.preventDefault();
@@ -21,4 +31,14 @@ function contact(event) {
             "Sorry, something broke >.< Contact me at anni.thekindfairy@gmail.com"
         )
     })
+}
+
+
+function toggleModal() {
+    if (isModalOpen) {
+        isModalOpen = false;
+        return document.body.classList.remove('modal--open')
+    }
+    isModalOpen = true;
+    document.body.classList += ' modal--open'
 }
